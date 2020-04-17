@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr 12 18:19:17 2020
+
+@author: Sweta Kumari
+"""
+
+import numpy as np  
+#import matplotlib.pyplot as plt  
+#import seaborn as seabornInstance 
+#from sklearn.model_selection import train_test_split 
+from sklearn.linear_model import LinearRegression
+#from sklearn import metrics
+
+x = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) 
+y = np.array([1, 3, 2, 5, 7, 8, 8, 9, 10, 12]) 
+x = x.reshape(-1,1)
+y = y.reshape(-1,1)
+
+regressor = LinearRegression()  
+fit = regressor.fit(x, y)
+#print(fit)
+print(regressor.intercept_)
+#For retrieving the slope:
+print(regressor.coef_)
